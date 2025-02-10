@@ -1,5 +1,5 @@
 const celsiusEl = document.getElementById('celsius');
-const farenheitEl = document.getElementById('farenheit');
+const fahrenheitEl = document.getElementById('fahrenheit');
 const kelvinEl = document.getElementById('kelvin');
 
 function computeTemp(event){
@@ -8,17 +8,17 @@ function computeTemp(event){
   switch (event.target.name) {
     case 'celsius':
       kelvinEl.value = (currentValue + 273.32).toFixed(2)
-      farenheitEl.value = (currentValue * 1.8 + 32).toFixed(2)
+      fahrenheitEl.value = (currentValue * 1.8 + 32).toFixed(2)
       break;
 
-    case 'farenheit':
+    case 'fahrenheit':
       celsiusEl.value = ((currentValue - 32) / 1.8).toFixed(2)
       kelvinEl.value = ((currentValue -32) / 1.8 + 273.32).toFixed(2)  
       break;
 
     case 'kelvin':
       celsiusEl.value = (currentValue - 273.32).toFixed(2)
-      farenheitEl.value = ((currentValue -273.32) * 1.8 + 32).toFixed(2)  
+      fahrenheitEl.value = ((currentValue -273.32) * 1.8 + 32).toFixed(2)  
     default:
       break;
   }
